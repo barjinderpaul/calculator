@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="setTextArea()">
+    <!-- 
+        old design
+        -------------
+        |result here|
+        |           |
+        -------------
+        C  x^2  sqrt  /
+        7   8   9     *
+        4   5   6     -
+        1   2   3     +  
+
+        
+     -->
+    <div class="background">
+        <div class="calculator-outer">
+            <div class="row">
+                <input type="text" id="result" maxlength="14" disabled name="result" placeholder="0">
+                
+            </input>
+            </div>
+            <div class="row">
+                <button onclick="clearResult()" class="buttons" id="clear" >
+                    <p>C</p>
+                </button>
+                <button onclick="backspace()"class="buttons" id="backspace" >
+                    <p>&larr;</p>
+                </button>
+                <button onclick="addToExpression('/')" class="buttons operations" id="divide">
+                    <p>&divide;</p>
+                </button>
+            </div>
+
+            <div class="row">
+                <button onclick="setValueTextArea(7)"class="buttons" id="seven" >
+                    <p>7</p>
+                </button>
+                <button onclick="setValueTextArea(8)" class="buttons" id="eight">
+                    <p>8</p>
+                </button>
+                <button onclick="setValueTextArea(9)" class="buttons" id="nine" >
+                    <p>9</p>
+                </button>
+                <button onclick="addToExpression('*')" class="buttons operations" id="multiply"  >
+                    <p>&times;</p>
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="setValueTextArea(4)" class="buttons" id="four">
+                    <p>4</p>
+                </button>
+                <button onclick="setValueTextArea(5)" class="buttons" id="five">
+                    <p>5</p>
+                </button>
+                <button onclick="setValueTextArea(6)" class="buttons" id="six" >
+                    <p>6</p>
+                </button>
+                <button onclick="addToExpression('-')" class="buttons operations" id="subtract" >
+                    <p>-</p>
+                </button>
+            </div>
+
+            <div class="row">
+                <button onclick="setValueTextArea(1)" class="buttons" id="one">
+                    <p>1</p>
+                </button>
+                <button onclick="setValueTextArea(2)" class="buttons" id="two">
+                    <p>2</p>
+                </button>
+                <button onclick="setValueTextArea(3)" class="buttons" id="three">
+                    <p>3</p>
+                </button>
+                <button onclick="addToExpression('+')" class="buttons operations" id="add" >
+                    <p>+</p>
+                </button>
+            </div>
+
+            <div class="row">
+                <button onclick="setValueTextArea(0)" class="buttons" id="zero" >
+                    <p>0</p>
+                </button>
+                <button onclick="showResult()" class="buttons operations" id="equals">
+                    <p>=</p>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
